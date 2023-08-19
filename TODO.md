@@ -2,7 +2,7 @@
 
 ## 0.1
 * ~~Bootstrap de l'app mostrant per defecte METAR de LELL~~
-* tancament v 0.1 i tag a git 
+* ~~tancament v 0.1 i tag a git~~ 
 
 ## 0.2
 * Admet per URL un parametre en format: https://danielribes.com/metar/lell  que és el nom OACI de l'aeroport del que volem el METAR
