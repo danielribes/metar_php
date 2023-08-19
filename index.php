@@ -1,15 +1,12 @@
 <?php 
 
 // DEBUG
-
 ini_set('display_errors', 1); ini_set('display_startup_errors', 1); error_reporting(E_ALL); 
 
-// ---------------------------------------------
-
-
-$rawmetar = file('https://tgftp.nws.noaa.gov/data/observations/metar/stations/LELL.TXT');
-//echo "<pre>";
-//var_dump($rawmetar);
+// Agafa AEROPORT
+$oaci = strtoupper($_GET['path']);
+$urlmetar = 'https://tgftp.nws.noaa.gov/data/observations/metar/stations/'.$oaci.'.TXT';
+$rawmetar = file($urlmetar);
 
 $date = explode(' ', $rawmetar[0]);
 $metar = explode(' ', $rawmetar[1]);
