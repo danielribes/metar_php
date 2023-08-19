@@ -1,7 +1,10 @@
 # TODO
 
-## 0.2
+## 0.1
 * ~~Bootstrap de l'app mostrant per defecte METAR de LELL~~
+* tancament v 0.1 i tag a git 
+
+## 0.2
 * Admet per URL un parametre en format: https://danielribes.com/metar/lell  que és el nom OACI de l'aeroport del que volem el METAR
 * Valida que el parametre rebut és un OACI valid de 4 caracters i que correspont a algun dels aeroports de la llista airports.csv
 * Demana METAR del aeroport OACI indicat i mostra nom de l'aeroport
