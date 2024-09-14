@@ -7,6 +7,8 @@
 ## 0.2
 * ~~Admet per URL un parametre en format: https://danielribes.com/metar/lell  que és el nom OACI de l'aeroport del que volem el METAR~~
 * Valida que el parametre rebut és un OACI valid de 4 caracters i que correspont a algun dels aeroports de la llista airports.csv
+  * muntar phpunit per fer tests
+     
 * Demana METAR del aeroport OACI indicat i mostra nom de l'aeroport
 * CSS per posar en sans-serif, color fondo i centrat a pantalla METAR i nom aeroport
 * tancament v 0.2 i tag a git
