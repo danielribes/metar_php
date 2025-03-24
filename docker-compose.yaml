@@ -1,5 +1,3 @@
-version: '3.9'
-
 services:
   web:
     build: .  # Usa el Dockerfile per construir la imatge
