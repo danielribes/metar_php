@@ -1,15 +1,16 @@
 <?php 
+require_once __DIR__ . '/../vendor/autoload.php';
+
+use dribes\Metar\Metar;
 
 // DEBUG
 ini_set('display_errors', 1); ini_set('display_startup_errors', 1); error_reporting(E_ALL); 
 
 // Agafa AEROPORT
 $oaci = strtoupper($_GET['path']);
-$urlmetar = 'https://tgftp.nws.noaa.gov/data/observations/metar/stations/'.$oaci.'.TXT';
-$rawmetar = file($urlmetar);
+$metar = new Metar($oaci);
+$message = $metar->getMetar('LELL');
 
-$date = explode(' ', $rawmetar[0]);
-$metar = explode(' ', $rawmetar[1]);
 ?>
 
 <!DOCTYPE html>
@@ -23,8 +24,7 @@ $metar = explode(' ', $rawmetar[1]);
 <h1>
 <?php
 
-echo implode(' ', $metar);
-
+echo $message;
 ?>
 </h1>
 </body>

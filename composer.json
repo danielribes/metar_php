@@ -1,0 +1,35 @@
+{
+    "name": "dribes/metar",
+    "description": "Una llibreria per obtenir el METAR d'un aeroport utilitzant la API de Aviation Weather Center i codis ICAO.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Daniel Ribes",
+            "email": "daniel@danielribes.com"
+        }
+    ],
+    "require": {
+        "php": ">=8.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^10.0",
+        "phpstan/phpstan": "^1.10",
+        "friendsofphp/php-cs-fixer": "^3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "dribes\\Metar\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "dribes\\Metar\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "phpunit",
+        "lint": "phpstan analyse src --level=max",
+        "fix-style": "php-cs-fixer fix"
+    }
+}
