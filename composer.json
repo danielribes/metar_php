@@ -19,12 +19,12 @@
     },
     "autoload": {
         "psr-4": {
-            "dribes\\Metar\\": "src/"
+            "dribes\\MetarParser\\": "src/MetarParser/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "dribes\\Metar\\Tests\\": "tests/"
+            "dribes\\MetarParser\\Tests\\": "tests/MetarParser/"
         }
     },
     "scripts": {
