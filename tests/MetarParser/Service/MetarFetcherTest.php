@@ -10,15 +10,15 @@ class MetarFetcherTest extends TestCase
     public function testFetchValidOaci()
     {
         $fetcher = new MetarFetcher();
-        $oaci = 'KJFK'; // Example valid OACI code
+        $icao = 'KJFK'; // Example valid OACI code
 
-        $data = $fetcher->fetch($oaci);
+        $data = $fetcher->fetch($icao);
 
         // debug
         //var_dump($data);
         $this->assertIsArray($data);
         $this->assertNotEmpty($data);
-        $this->assertStringContainsString($oaci, $data[1]);
+        $this->assertStringContainsString($icao, $data[1]);
     }
 
 }

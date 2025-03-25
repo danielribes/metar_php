@@ -10,7 +10,7 @@
   * muntar phpunit per fer tests
   * refactor a classes que siguin necessaries per muntar test i compoments ok
   * fer test amb regexp per validar:
-    * son 4 caracters text segons nomencaltura oaci
+    * son 4 caracters text segons nomencaltura icao
   * fer test per validar que esta dins llista aeroports
   * posar llista aeroports com un array que es carrega en una class
 * Demana METAR del aeroport OACI indicat i mostra nom de l'aeroport

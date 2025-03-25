@@ -10,18 +10,18 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL); 
 
 // Validate and sanitize input
-$oaci = isset($_GET['path']) ? strtoupper(trim($_GET['path'])) : null;
-if (!$oaci || !preg_match('/^[A-Z]{4}$/', $oaci)) {
+$icao = isset($_GET['path']) ? strtoupper(trim($_GET['path'])) : null;
+if (!$icao || !preg_match('/^[A-Z]{4}$/', $icao)) {
     die('Invalid or missing OACI code.');
 }
 
 try {
     // Fetch and parse METAR data
     $fetcher = new MetarFetcher();
-    $rawmetar = $fetcher->fetch($oaci);
+    $rawmetar = $fetcher->fetch($icao);
 
     $parser = new MetarParser();
-    $metar = $parser->parse($oaci, $rawmetar);
+    $metar = $parser->parse($icao, $rawmetar);
 
     $message = $metar->getMetar();
 } catch (Exception $e) {
@@ -35,7 +35,7 @@ try {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>METAR <?php echo htmlspecialchars($oaci); ?></title>
+    <title>METAR <?php echo htmlspecialchars($icao); ?></title>
 </head>
 <body>
 <h1>
